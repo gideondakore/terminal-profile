@@ -1,0 +1,19 @@
+# Virtual Environment directories (venv created these)
+bin/
+include/
+lib/
+lib64/
+share/
+
+# Pyenv / venv config (auto-generated)
+pyvenv.cfg
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+
+# OS generated files
+.DS_Store
+Thumbs.db
