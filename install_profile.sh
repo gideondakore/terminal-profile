@@ -1,5 +1,7 @@
+#!/bin/bash
+
 # Fail on any command.
-set -eux pipefail
+set -eux -o pipefail
 
 # Install plug-ins (you can git-pull to update them later).
 (cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting)
