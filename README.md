@@ -70,7 +70,7 @@ source bin/activate
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/pixegami/terminal-profile.git .
+git clone https://github.com/gideondakore/terminal-profile.git .
 ```
 
 ### 3. Run the Installer
