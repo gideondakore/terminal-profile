@@ -73,63 +73,24 @@ source bin/activate
 git clone https://github.com/pixegami/terminal-profile.git .
 ```
 
-### 3. Powerline (and fonts)
+### 3. Run the Installer
 
-We'll install the font (RobotoMono for Powerline). I'll also install it into VIM, since that
-is my built-in editor of choice (but you don't have to use it).
-
-The Powerline fonts also include special characters (like Git branches) that we will use later in
-the terminal profile theme.
+Run the single install script to set up everything at once:
 
 ```bash
-./install_powerline.sh
+./install.sh
 ```
 
-> **Note:** The script requires bash to run. Make sure you are not running it with `sh` as it will
-> cause compatibility errors. Run it directly with `./install_powerline.sh` or `bash install_powerline.sh`.
+> This will run `install_powerline.sh`, `install_terminal.sh`, and `install_profile.sh` in order.
 
-> **Note:** Since we are running inside a virtual environment, the `--user` flag is not used
-> for pip installs. The script handles this automatically.
-
-### 4. ZSH, OhMyZSH and Plugins
-
-The shell that I use is "ZSH", with the OhMyZSH upgrade on top of that. To install all of that stuff,
-you can run the helper script (and may need to restart after).
-
-```bash
-./install_terminal.sh
-```
-
-After this, the terminal should look a bit different, but we need to do the next step to have the
-entire theme.
-
-### 5. Profile (plugins, theme, font and color)
-
-This script will first install two plugins that I like to use: auto-complete and color highlighting.
-
-```bash
-# You don't need to execute this - it's part of the script already.
-(cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting)
-(cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions)
-```
-
-It will also copy over the `.zshrc` and `pixegami-agnoster.zsh-theme` files for the
-terminal to use (which will wire up the plugins and the theme).
-
-The last command is to create a terminal profile that will set the colors and also set the font
-to be the Powerline one we installed earlier (required for the theme to display correctly).
-
-```bash
-./install_profile.sh
-```
-
-> You can also change the font to any of the other [Powerline Patched Fonts](https://github.com/powerline/fonts) too if you don't like RobotoMono.
-
-After running the script, reload your shell configuration for the changes to take effect:
+After the script completes, reload your shell configuration:
 
 ```bash
 source ~/.zshrc
 ```
+
+> **Note:** You must run `source ~/.zshrc` manually after the script finishes.
+> It cannot be done automatically inside the script.
 
 If it looks funky after this command, then you might need to wait until the theme is updated with a
 Powerline font, and may need to also restart your machine.
@@ -175,6 +136,9 @@ When you are done, you can deactivate the virtual environment by running:
 ```bash
 deactivate
 ```
+
+> **Note:** The `deactivate` command only works when the virtual environment is active.
+> If you see `command not found: deactivate`, run `source bin/activate` first.
 
 ## Sources
 
