@@ -93,7 +93,7 @@ source ~/.zshrc
 > It cannot be done automatically inside the script.
 
 If it looks funky after this command, then you might need to wait until the theme is updated with a
-Powerline font, and may need to also restart your machine.
+Powerline font, and may need to also exit the terminal and open it again or restart your machine.
 
 ## Notes
 
