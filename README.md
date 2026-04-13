@@ -1,6 +1,6 @@
 # Terminal Profile
 
-![terminal](./terminal_screenshot.png)
+![terminal](./terminal_setup_screenshot.png)
 
 This is my profile for UNIX (MacOS/Linux) terminals. For Ubuntu, I just use the default terminal
 app. For MacOS, I use [iTerm2](https://iterm2.com/).
