@@ -1,5 +1,7 @@
+#!/bin/bash
+
 # Fail on any command.
-set -eux pipefail
+set -eux -o pipefail
 
 # Install ZSH
 sudo apt install -y git-core zsh curl
